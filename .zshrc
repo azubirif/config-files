@@ -103,3 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cdgh="cd ~/Documentos/GitHub"
+
+export EDITOR=vim
+export VISUAL=vim
