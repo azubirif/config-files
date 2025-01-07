@@ -118,3 +118,8 @@ fi
 
 export EDITOR=vim
 export VISUAL=vim
+
+alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias cdgh='cd ~/Documentos/GitHub/'
+
+neofetch
