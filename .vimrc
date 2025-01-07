@@ -2,6 +2,9 @@ set backspace=indent,eol,start
 syntax enable
 set number
 
+set t_Co=256
+set encoding=utf-8
+
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
@@ -63,4 +66,4 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_symbols.linenr = ''
 
-
+colorscheme gruvbox

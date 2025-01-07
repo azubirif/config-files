@@ -11,8 +11,8 @@ config.term = "xterm-256color"
 config.prefer_egl = true
 config.use_fancy_tab_bar = false
 -- For example, changing the color scheme:
-config.color_scheme = 'Dracula (Official)'
-config.font = wezterm.font('0xProto Nerd Font Mono Normal')
+config.color_scheme = 'Zenburn'
+config.font = wezterm.font('0xProto Nerd Font')
 config.window_background_opacity = 1 
 
 config.window_decorations = "NONE | RESIZE"
