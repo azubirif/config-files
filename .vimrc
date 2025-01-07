@@ -16,7 +16,7 @@ Plug 'SirVer/ultisnips'
 call plug#end()
 
 let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsSnippetDirectories=["C:/users/aleja/vimfiles/plugged/vim-snippets/my-snippets"]
+let g:UltiSnipsSnippetDirectories=["/home/azubirif/.vim/plugged/vim-snippets/my-snippets"]
 
 let g:airline_powerline_fonts = 1
 
