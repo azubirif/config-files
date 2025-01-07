@@ -12,9 +12,11 @@ Plug 'preservim/nerdtree'
 Plug 'honza/vim-snippets'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsSnippetDirectories=["C:/users/aleja/vimfiles/plugged/vim-snippets/my-snippets"]
 
 let g:airline_powerline_fonts = 1
 
