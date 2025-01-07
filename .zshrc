@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
+
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -106,3 +107,5 @@ alias cdgh="cd ~/Documentos/GitHub"
 
 export EDITOR=vim
 export VISUAL=vim
+
+neofetch
