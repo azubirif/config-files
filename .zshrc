@@ -103,9 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+path += ('/usr/local/texlive/2024/bin/x86_64-linux')
+
 alias cdgh="cd ~/Documentos/GitHub"
 
 export EDITOR=vim
 export VISUAL=vim
+export PATH
 
 neofetch
