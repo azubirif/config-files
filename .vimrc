@@ -15,6 +15,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 call plug#end()
 
+let g:vimtex_compiler_method = "latexmk"
+
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsSnippetDirectories=["/home/azubirif/.vim/plugged/vim-snippets/my-snippets"]
 
