@@ -5,20 +5,22 @@ set number
 set t_Co=256
 set encoding=utf-8
 
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
+
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
-Plug 'honza/vim-snippets'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 call plug#end()
+let g:ycm_auto_trigger=1
 
 let g:vimtex_compiler_method = "latexmk"
-
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsSnippetDirectories=["/home/azubirif/.vim/plugged/vim-snippets/my-snippets"]
 
 let g:airline_powerline_fonts = 1
 
@@ -73,3 +75,21 @@ let g:airline_symbols.linenr = ''
 colorscheme gruvbox
 
 set background=dark
+
+"Toggle YouCompleteMe on and off with F3
+function Toggle_ycm()
+    if g:ycm_show_diagnostics_ui == 0
+        let g:ycm_auto_trigger = 1
+        let g:ycm_show_diagnostics_ui = 1
+        :YcmRestartServer
+        :e
+        :echo "YCM on"
+    elseif g:ycm_show_diagnostics_ui == 1
+        let g:ycm_auto_trigger = 0
+        let g:ycm_show_diagnostics_ui = 0
+        :YcmRestartServer
+        :e
+        :echo "YCM off"
+    endif
+endfunction
+map <F3> :call Toggle_ycm() <CR>

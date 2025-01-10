@@ -31,6 +31,9 @@ def add_row(snip):
 	snip.expand_anon(final_str)
 endglobal
 
+snippet pkg "Paquetes" w
+\usepackage{$0}
+endsnippet
 
 ###############
 # ENVIRONMENT #
@@ -152,9 +155,251 @@ snippet writing "Plantilla" w
 \end{document}
 endsnippet
 
+snippet sec "Sección" w
+\section{$0}
+endsnippet
+
+snippet ssec "Subsección" w
+\subsection{$0}
+endsnippet
+
+# Letras griegas
+snippet @a "alpha" iA
+\alpha
+endsnippet
+
+snippet @b "beta" iA
+\beta
+endsnippet
+
+snippet @g "gamma" iA
+\gamma
+endsnippet
+
+snippet @d "delta" iA
+\delta
+endsnippet
+
+snippet @e "epsilon" iA
+\epsilon
+endsnippet
+
+snippet @z "zeta" iA
+\zeta
+endsnippet
+
+snippet @h "eta" iA
+\eta
+endsnippet
+
+snippet @t "theta" iA
+\theta
+endsnippet
+
+snippet @i "iota" iA
+\iota
+endsnippet
+
+snippet @k "kappa" iA
+\kappa
+endsnippet
+
+snippet @l "lambda" iA
+\lambda
+endsnippet
+
+snippet @m "mu" iA
+\mu
+endsnippet
+
+snippet @n "nu" iA
+\nu
+endsnippet
+
+snippet @xi "xi" iA
+\xi
+endsnippet
+
+snippet @o "omicron" iA
+\omicron
+endsnippet
+
+snippet @p "pi" iA
+\pi
+endsnippet
+
+snippet @r "rho" iA
+\rho
+endsnippet
+
+snippet @s "sigma" iA
+\sigma
+endsnippet
+
+snippet @t "tau" iA
+\tau
+endsnippet
+
+snippet @u "upsilon" iA
+\upsilon
+endsnippet
+
+snippet @phi "phi" iA
+\phi
+endsnippet
+
+snippet @chi "chi" iA
+\chi
+endsnippet
+
+snippet @psi "psi" iA
+\psi
+endsnippet
+
+snippet @omega "omega" iA
+\omega
+endsnippet
+
+# Mayúsculas
+snippet @A "Alpha" iA
+\Alpha
+endsnippet
+
+snippet @B "Beta" iA
+\Beta
+endsnippet
+
+snippet @G "Gamma" iA
+\Gamma
+endsnippet
+
+snippet @D "Delta" iA
+\Delta
+endsnippet
+
+snippet @E "Epsilon" iA
+\Epsilon
+endsnippet
+
+snippet @Z "Zeta" iA
+\Zeta
+endsnippet
+
+snippet @H "Eta" iA
+\Eta
+endsnippet
+
+snippet @T "Theta" iA
+\Theta
+endsnippet
+
+snippet @I "Iota" iA
+\Iota
+endsnippet
+
+snippet @K "Kappa" iA
+\Kappa
+endsnippet
+
+snippet @L "Lambda" iA
+\Lambda
+endsnippet
+
+snippet @M "Mu" iA
+\Mu
+endsnippet
+
+snippet @N "Nu" iA
+\Nu
+endsnippet
+
+snippet @Xi "Xi" iA
+\Xi
+endsnippet
+
+snippet @O "Omicron" iA
+\Omicron
+endsnippet
+
+snippet @P "Pi" iA
+\Pi
+endsnippet
+
+snippet @R "Rho" iA
+\Rho
+endsnippet
+
+snippet @S "Sigma" iA
+\Sigma
+endsnippet
+
+snippet @U "Upsilon" iA
+\Upsilon
+endsnippet
+
+snippet @Phi "Phi" iA
+\Phi
+endsnippet
+
+snippet @Chi "Chi" iA
+\Chi
+endsnippet
+
+snippet @Psi "Psi" iA
+\Psi
+endsnippet
+
+snippet @Omega "Omega" iA
+\Omega
+endsnippet
+
 ########
 # MATH #
 ########
+snippet vec "Vector" w
+\vec{$0}
+endsnippet
+
+snippet RR "Reales" iA
+\mathbb{R}
+endsnippet
+
+snippet forall "Para todo" iA
+\forall
+endsnippet
+
+snippet mbb "Bonito" iA
+\mathbb{$0}
+endsnippet
+
+snippet exists "Existe" iA
+\exists
+endsnippet
+
+snippet inn "Dentro" iA
+\in
+endsnippet
+
+snippet != "No igual" iA
+\neq
+endsnippet
+
+snippet <= "Menor o igual" iA
+\leq
+endsnippet
+
+snippet >= "Mayor o igual" iA
+\geq
+endsnippet
+
+snippet ^ "Exp" iA
+^{$0}
+endsnippet
+
+snippet _ "Sub" iA
+_{$0}
+endsnippet
+
 snippet eqq "Ecuación numerada" w
 \begin{equation}
 	\begin{split}
@@ -195,7 +440,7 @@ snippet DD "D" w
 \mathbb{D}
 endsnippet
 
-snippet mk "Inline Math" w
+snippet mk "Inline Math" iA
 $${1}$ $0
 endsnippet
 
@@ -205,7 +450,7 @@ snippet dm "Display Math" w
 \]$0
 endsnippet
 
-snippet frac "Fraction" w
+snippet // "Fraction" w
 \frac{$1}{$2}$0
 endsnippet
 
@@ -289,7 +534,7 @@ snippet rij "mrij" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
 endsnippet
 
-snippet => "Implies" w
+snippet => "Implies" iA
 \implies
 endsnippet
 
