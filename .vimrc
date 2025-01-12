@@ -93,3 +93,6 @@ function Toggle_ycm()
     endif
 endfunction
 map <F3> :call Toggle_ycm() <CR>
+
+" Comandos de C
+command! CRun w|!gcc % -o %<.out && ./%<.out
