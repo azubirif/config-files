@@ -96,3 +96,14 @@ map <F3> :call Toggle_ycm() <CR>
 
 " Comandos de C
 command! CRun w|!gcc % -o %<.out && ./%<.out
+
+" Comandos de Python
+nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
