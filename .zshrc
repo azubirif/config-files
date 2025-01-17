@@ -113,3 +113,5 @@ export PATH
 
 clear
 neofetch
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

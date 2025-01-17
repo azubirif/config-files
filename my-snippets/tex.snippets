@@ -151,7 +151,32 @@ snippet writing "Plantilla" w
 
 \begin{document}
 \maketitle
+\tableofcontents
+\pagebreak
 
+\end{document}
+endsnippet
+
+snippet writing_math "Plantilla de matemáticas" w
+\documentclass{article}
+\author{Alejandro Zubiri}
+\title{`!p snip.rv = snip.basename`}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=0.25in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts}
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+$0
 \end{document}
 endsnippet
 
@@ -468,6 +493,33 @@ endsnippet
 
 snippet ss "Super Script" i
 ^{$1}$0
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 1000
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
 snippet __ "subscript" Aw

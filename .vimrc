@@ -2,6 +2,11 @@ set backspace=indent,eol,start
 syntax enable
 set number
 
+set tabstop=4
+set softtabstop=0 noexpandtab
+set shiftwidth=4
+
+set scrolloff=3
 set t_Co=256
 set encoding=utf-8
 
