@@ -103,15 +103,18 @@ export LANG=es_ES.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-path += ('/usr/local/texlive/2024/bin/x86_64-linux')
 
 alias cdgh="cd ~/Documentos/GitHub"
+
+# Para Arch
+alias log_out="hyprctl dispatch exit"
+alias waybar_reload="killall -SIGUSR2 waybar"
 
 export EDITOR=vim
 export VISUAL=vim
 export PATH
+export MANPATH
+export INFOPATH
 
 clear
 neofetch
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

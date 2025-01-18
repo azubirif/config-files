@@ -11,7 +11,7 @@ set t_Co=256
 set encoding=utf-8
 
 let g:UltiSnipsExpandTrigger='<c-j>'
-let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 
 call plug#begin()
@@ -26,6 +26,7 @@ call plug#end()
 let g:ycm_auto_trigger=1
 
 let g:vimtex_compiler_method = "latexmk"
+let g:vimtex_view_method='zathura'
 
 let g:airline_powerline_fonts = 1
 
