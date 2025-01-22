@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/updates","network","bluetooth","backlight","pulseaudio","clock", "battery","custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -22,9 +22,11 @@
 	},
 
 	"network": {
+		"interface": "wlan0",
 		"tooltip": false,
 		"format-wifi": "  {essid}",
-		"format-ethernet": ""
+		"format-ethernet": "",
+		"on-click": "nm-connection-editor"
 	},
 	"backlight": {
 		"tooltip": false,
@@ -91,8 +93,11 @@
         "interval": 15,
         "on-click": "kitty -e paru -Syu && notify-send 'The system has been updated' "
     },
-    "custom/wallpaper":{
-        "format":" ",
-        "on-click": "bash ~/.config/system_scripts/pkill_bc"
-    }
+	"bluetooth": {
+    "format": " 󰂯 ",
+    "tooltip": true,
+	  "tooltip-format": "Bluetooth Settings",
+    "on-click": "blueman-manager",
+   },
+
 }
