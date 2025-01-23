@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-left": ["custom/launcher","cpu","memory"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["custom/updates","network","bluetooth","backlight","pulseaudio","clock", "battery","custom/power"],
 	
@@ -64,19 +64,22 @@
         "format": " {}%",
         "max-length": 10
     },
-    "custom/media": {
-        "interval": 30,
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 20,
-        "format-icons": {
-            "spotify": " ",
-            "default": " "
-        },
-        "escape": true,
-        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause"
-    },
+    "custom/waymedia": {
+//    	"format": "{title}",
+    	"exec": "~/.config/waybar/scripts/waymedia/waymedia",
+    	"interval": 1,
+    	"limit": 60,
+    	"on-click": "playerctl play-pause",
+    	"on-scroll-up": "playerctl next",
+    	"on-scroll-down": "playerctl previous"
+	},
+	"custom/waymedia-buttons": {
+    "exec": "~/.config/waybar/scripts/waymedia/waymedia-buttons",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+	},
     "custom/launcher":{
         "format": " ",
         "on-click": "rofi -show drun",
@@ -84,7 +87,7 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh",
+        "on-click": "bash ~/.config/rofi/leave/leave.sh"
     },
     "custom/updates":{
         "format": "{} Update(s)",
@@ -97,7 +100,7 @@
     "format": " 󰂯 ",
     "tooltip": true,
 	  "tooltip-format": "Bluetooth Settings",
-    "on-click": "blueman-manager",
-   },
+    "on-click": "blueman-manager"
+   }
 
 }
