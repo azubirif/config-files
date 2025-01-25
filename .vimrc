@@ -1,4 +1,5 @@
 set backspace=indent,eol,start
+
 syntax enable
 set number
 set termguicolors
@@ -22,11 +23,12 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 let g:ycm_auto_trigger=1
 
 let g:vimtex_compiler_method = "latexmk"
-let g:vimtex_view_method='okular'
+let g:vimtex_view_method='zathura'
 
 let g:airline_powerline_fonts = 1
 
@@ -78,7 +80,7 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_symbols.linenr = ''
 
-colorscheme gruvbox
+colorscheme onedark
 
 set background=dark
 
@@ -101,7 +103,7 @@ endfunction
 map <F3> :call Toggle_ycm() <CR>
 
 " Comandos de C
-command! CRun w|!gcc % -o %<.out && ./%<.out
+command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out
 
 " Comandos de Python
 nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>

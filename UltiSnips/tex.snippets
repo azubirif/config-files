@@ -38,6 +38,13 @@ endsnippet
 ###############
 # ENVIRONMENT #
 ###############
+snippet beg "begin and block" b
+\begin{$1}
+
+$0
+
+\end{$1}
+endsnippet
 
 snippet lemma "Lemma" bi
 \begin{lemma}
@@ -52,9 +59,9 @@ snippet prop "Proposition" bi
 endsnippet
 
 snippet thrm "Theorem" bi
-\begin{theorem}[$1]
+\begin{teorema}[$1]
 	${0:${VISUAL}}
-\end{theorem}
+\end{teorema}
 endsnippet
 
 snippet post "postulate" bi
@@ -64,9 +71,9 @@ snippet post "postulate" bi
 endsnippet
 
 snippet prf "Proof" bi
-\begin{myproof}[$1]
+\begin{proof}[Demostración]
 	${0:${VISUAL}}
-\end{myproof}
+\end{proof}
 endsnippet
 
 snippet def "Definition" bi
@@ -157,6 +164,14 @@ snippet writing "Plantilla" w
 \end{document}
 endsnippet
 
+snippet writingsubfile "Plantilla para subarchivos" w
+\documentclass{../$1}
+
+\begin{document}
+$0
+\end{document}
+endsnippet
+
 snippet writing_math "Plantilla de matemáticas" w
 \documentclass{article}
 \author{Alejandro Zubiri}
@@ -164,11 +179,11 @@ snippet writing_math "Plantilla de matemáticas" w
 
 \renewcommand*\contentsname{Índice}
 
-\usepackage[margin=0.25in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed}
 
-\newtheorem{teorema}{Teorema}
-\newtheorem{defin}{Definición}
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
 
 \newcommand{\R}{\mathbb{R}}
 
