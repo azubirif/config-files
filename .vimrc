@@ -30,7 +30,22 @@ let g:ycm_auto_trigger=1
 let g:vimtex_compiler_method = "latexmk"
 let g:vimtex_view_method='zathura'
 
+let t:is_transparent = 0
+
+function! Toggle_transparent()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+		set background=dark
+        let t:is_transparent = 0
+     endif
+endfunction
+nnoremap <F1> : call Toggle_transparent()<CR>
+
 let g:airline_powerline_fonts = 1
+
+set completeopt-=preview
 
 if !exists('g:airline_symbols')
 
@@ -107,6 +122,10 @@ command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out
 
 " Comandos de Python
 nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
+imap <ALT+Up> :ddkP <CR>
+imap <ALT+Down> :ddp <CR>
+
+imap <C-BS> daw
 
 inoremap " ""<left>
 inoremap ' ''<left>

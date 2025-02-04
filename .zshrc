@@ -106,6 +106,8 @@ export LANG=es_ES.UTF-8
 
 alias cdgh="cd ~/Documentos/GitHub"
 
+alias condaenv='eval "$(/home/azubirif/anaconda3/bin/conda shell.zsh hook)"'
+
 # Para Arch
 alias log_out="hyprctl dispatch exit"
 alias waybar_reload="killall -SIGUSR2 waybar"
@@ -117,3 +119,5 @@ export MANPATH
 export INFOPATH
 
 clear
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

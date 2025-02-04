@@ -46,7 +46,7 @@ $0
 \end{$1}
 endsnippet
 
-snippet · "Producto" w
+snippet · "Producto" iA
 \cdot 
 endsnippet
 
@@ -184,7 +184,8 @@ snippet writing_math "Plantilla de matemáticas" w
 \renewcommand*\contentsname{Índice}
 
 \usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
+\usepackage[a]{esvect}
 
 \newmdtheoremenv{teorema}{Teorema}
 \newmdtheoremenv{defin}{Definición}
@@ -208,6 +209,10 @@ snippet ssec "Subsección" w
 endsnippet
 
 # Letras griegas
+snippet @vp "varphi" iA
+\varphi
+endsnippet
+
 snippet @a "alpha" iA
 \alpha
 endsnippet
@@ -300,7 +305,7 @@ snippet @psi "psi" iA
 \psi
 endsnippet
 
-snippet @omega "omega" iA
+snippet @w "omega" iA
 \omega
 endsnippet
 
@@ -393,7 +398,7 @@ snippet @Psi "Psi" iA
 \Psi
 endsnippet
 
-snippet @Omega "Omega" iA
+snippet @W "Omega" iA
 \Omega
 endsnippet
 
@@ -404,6 +409,18 @@ endsnippet
 ########
 # MATH #
 ########
+snippet vv "Vector" iA
+\vv{$1}$0
+endsnippet
+
+snippet >> "Mapsto" w
+\mapsto
+endsnippet
+
+snippet RR "Reales" w
+\mathbb{R}
+endsnippet
+
 snippet set "Conjunto" w
 \\{ $0 \\}
 endsnippet
