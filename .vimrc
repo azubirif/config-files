@@ -23,7 +23,6 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
-Plug 'joshdick/onedark.vim'
 call plug#end()
 let g:ycm_auto_trigger=1
 
@@ -95,7 +94,7 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_symbols.linenr = ''
 
-colorscheme onedark
+colorscheme gruvbox
 
 set background=dark
 
@@ -125,7 +124,7 @@ nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
 imap <ALT+Up> :ddkP <CR>
 imap <ALT+Down> :ddp <CR>
 
-imap <C-BS> daw
+imap <C-BS> :daw
 
 inoremap " ""<left>
 inoremap ' ''<left>
