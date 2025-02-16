@@ -121,3 +121,4 @@ export INFOPATH
 clear
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(oh-my-posh init zsh)"
