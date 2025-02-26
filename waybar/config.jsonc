@@ -52,7 +52,7 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "<b>{:%H:%M   %d/%m/%Y}</b>"
+        "format": "<b>{:%H:%M  %d/%m/%Y}</b>"
     },
     "cpu": {
         "interval": 15,
@@ -80,7 +80,8 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
 	},
-    "custom/launcher":{
+	//" "
+	    "custom/launcher":{
         "format": " ",
         "on-click": "rofi -show drun",
         "on-click-right": "killall rofi"
