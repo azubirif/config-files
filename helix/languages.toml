@@ -1,0 +1,8 @@
+[language-server.c-lsp]
+command = "clangd"
+
+[[language]]
+name = "c"
+scope = "source.c"
+indent = {tab-width = 4, unit = " "}
+language-servers= [ { name = "clangd" } ]
