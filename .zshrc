@@ -3,13 +3,13 @@
 
 # Path to your Oh My Zsh installation.
 
-export ZSH="$HOME/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,13 +107,14 @@ export LANG=es_ES.UTF-8
 alias cdgh="cd ~/Documentos/GitHub"
 
 alias condaenv='eval "$(/home/azubirif/anaconda3/bin/conda shell.zsh hook)"'
+alias hx="helix"
 
 # Para Arch
 alias log_out="hyprctl dispatch exit"
 alias waybar_reload="killall -SIGUSR2 waybar"
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=helix
+export VISUAL=helix
 export PATH
 export MANPATH
 export INFOPATH
