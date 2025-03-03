@@ -22,7 +22,7 @@ bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component
 bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
 
 # Background
-exec --no-startup-ide feh --bg-scale /usr/Imágenes/firewatch.jpg
+exec --no-startup-ide feh --bg-scale ~/Documentos/GitHub/config-files/firewatch.jpg
 
 bar {
     status_command i3status
