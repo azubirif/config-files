@@ -27,7 +27,7 @@ call plug#end()
 let g:ycm_auto_trigger=1
 
 let g:vimtex_compiler_method = "latexmk"
-let g:vimtex_view_method='zathura'
+let g:vimtex_view_general_viewer='okular'
 
 let t:is_transparent = 0
 
