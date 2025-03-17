@@ -23,7 +23,6 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
-Plug 'Townk/vim-autoclose'
 Plug 'preservim/nerdtree'
 call plug#end()
 let g:ycm_auto_trigger=1
