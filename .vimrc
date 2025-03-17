@@ -24,7 +24,7 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'Townk/vim-autoclose'
-
+Plug 'preservim/nerdtree'
 call plug#end()
 let g:ycm_auto_trigger=1
 
@@ -99,24 +99,6 @@ let g:airline_symbols.linenr = ''
 colorscheme gruvbox
 
 set background=dark
-
-"Toggle YouCompleteMe on and off with F3
-function Toggle_ycm()
-    if g:ycm_show_diagnostics_ui == 0
-        let g:ycm_auto_trigger = 1
-        let g:ycm_show_diagnostics_ui = 1
-        :YcmRestartServer
-        :e
-        :echo "YCM on"
-    elseif g:ycm_show_diagnostics_ui == 1
-        let g:ycm_auto_trigger = 0
-        let g:ycm_show_diagnostics_ui = 0
-        :YcmRestartServer
-        :e
-        :echo "YCM off"
-    endif
-endfunction
-map <F3> :call Toggle_ycm() <CR>
 
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
