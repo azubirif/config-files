@@ -23,6 +23,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
+Plug 'Townk/vim-autoclose'
 call plug#end()
 let g:ycm_auto_trigger=1
 
@@ -121,15 +122,3 @@ command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out
 
 " Comandos de Python
 nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
-imap <ALT+Up> :ddkP <CR>
-imap <ALT+Down> :ddp <CR>
-
-imap <C-BS> :daw
-
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
