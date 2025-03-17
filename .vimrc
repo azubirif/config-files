@@ -24,6 +24,7 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'Townk/vim-autoclose'
+
 call plug#end()
 let g:ycm_auto_trigger=1
 
@@ -116,6 +117,9 @@ function Toggle_ycm()
     endif
 endfunction
 map <F3> :call Toggle_ycm() <CR>
+
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 " Comandos de C
 command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out

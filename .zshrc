@@ -16,7 +16,8 @@ export LANG=es_ES.UTF-8
    export EDITOR='nvim'
  fi
 
-alias cdgh="cd ~/Documentos/GitHub"
+alias cdgh="cd ~/Documentos/GitHub/"
+alias cdapuntes="cd ~/Documentos/GitHub/apuntes-carrera/source/content/"
 
 alias condaenv='eval "$(/home/azubirif/anaconda3/bin/conda shell.zsh hook)"'
 alias hx="helix"
@@ -24,9 +25,10 @@ alias hx="helix"
 # Para Arch
 alias log_out="hyprctl dispatch exit"
 alias waybar_reload="killall -SIGUSR2 waybar"
+alias hyprpaper_reload="killall hyprpaper && nohup hyprpaper &"
 
-export EDITOR=helix
-export VISUAL=helix
+export EDITOR=vim
+export VISUAL=vim
 export PATH
 export MANPATH
 export INFOPATH
