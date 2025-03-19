@@ -1,4 +1,5 @@
 set backspace=indent,eol,start
+set clipboard=unnamedplus
 
 syntax enable
 set number
@@ -15,6 +16,9 @@ let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsSnippetsDir = "~/.vim/plugged/vim-snippets/UltiSnips"
 let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 
+let mapleader = " "
+
+" Plugins
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
@@ -24,6 +28,15 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'ryanoasis/vim-devicons'
+Plug 'Donaldttt/fuzzyy'
+Plug 'rstacruz/vim-closer'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 let g:ycm_auto_trigger=1
 
@@ -104,6 +117,10 @@ nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 
 " Comandos de C
 command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out
+
+nmap <Leader>n :NERDTreeToggle <CR>
+nmap <Leader>pv :Ex <CR>
+nmap <Leader>pf :FuzzyFiles <CR>
 
 " Comandos de Python
 nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
