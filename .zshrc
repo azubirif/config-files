@@ -33,6 +33,8 @@ export PATH
 export MANPATH
 export INFOPATH
 
+cat ~/.cache/wal/sequences
+
 clear
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

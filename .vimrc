@@ -7,6 +7,7 @@ set termguicolors
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
+set mouse=a
 
 set scrolloff=3
 set t_Co=256
@@ -15,6 +16,9 @@ set encoding=utf-8
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsSnippetsDir = "~/.vim/plugged/vim-snippets/UltiSnips"
 let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
+
+" Desactivar error highlighting en pylsp
+let g:lsp_diagnostics_enabled = 0
 
 let mapleader = " "
 
@@ -111,16 +115,21 @@ let g:airline_symbols.linenr = ''
 colorscheme gruvbox
 
 set background=dark
-
+" Maps
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 " Comandos de C
 command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out
 
+" Files
 nmap <Leader>n :NERDTreeToggle <CR>
 nmap <Leader>pv :Ex <CR>
 nmap <Leader>pf :FuzzyFiles <CR>
+
+" Scroll
+" nmap <Down> <C-e>
+" nmap <Up> <C-y>
 
 " Comandos de Python
 nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
