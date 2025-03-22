@@ -20,6 +20,9 @@ let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 " Desactivar error highlighting en pylsp
 let g:lsp_diagnostics_enabled = 0
 
+" Auto instalar plugins
+autocmd! VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | q | endif
+
 let mapleader = " "
 
 " Plugins
@@ -41,8 +44,10 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'Donaldttt/fuzzyy'
 Plug 'rstacruz/vim-closer'
 Plug 'tpope/vim-fugitive'
+Plug 'sainnhe/everforest'
 call plug#end()
 let g:ycm_auto_trigger=1
+
 
 let g:vimtex_compiler_method = "latexmk"
 let g:vimtex_view_general_viewer='okular'
@@ -112,7 +117,7 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_symbols.linenr = ''
 
-colorscheme gruvbox
+colorscheme everforest
 
 set background=dark
 " Maps
