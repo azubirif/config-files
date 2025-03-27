@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bira"
 
 plugins=(git)
 
@@ -41,3 +41,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # eval "$(oh-my-posh init zsh --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/easy-term.omp.json')"
 
 . "$HOME/.local/bin/env"
+
+# pnpm
+export PNPM_HOME="/home/azubirif/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

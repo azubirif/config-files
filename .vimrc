@@ -45,12 +45,18 @@ Plug 'Donaldttt/fuzzyy'
 Plug 'rstacruz/vim-closer'
 Plug 'tpope/vim-fugitive'
 Plug 'sainnhe/everforest'
+Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'dense-analysis/ale'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 let g:ycm_auto_trigger=1
 
 
 let g:vimtex_compiler_method = "latexmk"
 let g:vimtex_view_general_viewer='okular'
+let g:vimtex_syntax_conceal_disable = 1
 
 let t:is_transparent = 0
 
@@ -117,12 +123,13 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_symbols.linenr = ''
 
-colorscheme everforest
+colorscheme onedark
 
 set background=dark
 " Maps
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+inoremap <C-e> <C-o>A
 
 " Comandos de C
 command! CRun w|!gcc % -o %<.out -lm && clear && ./%<.out

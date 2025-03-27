@@ -28,5 +28,7 @@ return require('packer').startup(function(use)
   use('williamboman/mason.nvim')
   use("williamboman/mason-lspconfig.nvim")
   use("lervag/vimtex")
+  use("sirver/ultisnips")
+  use("Shougo/deoplete.nvim")
   end)
 
