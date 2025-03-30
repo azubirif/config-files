@@ -8,6 +8,7 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
+set wildmode=longest
 
 set scrolloff=3
 set t_Co=256
@@ -50,9 +51,25 @@ Plug 'Yggdroot/indentLine'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'dense-analysis/ale'
 Plug 'joshdick/onedark.vim'
+Plug 'folke/which-key.nvim'
+Plug 'gelguy/wilder.nvim'
+Plug 'evanleck/vim-svelte'
+Plug 'airblade/vim-tailwind'
 call plug#end()
 let g:ycm_auto_trigger=1
 
+" Key bindings can be changed, see below
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})
+call wilder#set_option('renderer', wilder#popupmenu_renderer({
+      \ 'pumblend': 20,
+      \ }))
+call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
+      \ 'highlights': {
+      \   'border': 'Normal',
+      \ },
+      \ 'border': 'rounded',
+      \ })))
 
 let g:vimtex_compiler_method = "latexmk"
 let g:vimtex_view_general_viewer='okular'
