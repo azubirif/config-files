@@ -122,4 +122,4 @@ export VISUAL=vim
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 alias cdgh='cd ~/Documentos/GitHub/'
 
-neofetch
+zsh

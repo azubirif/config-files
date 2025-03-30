@@ -30,5 +30,12 @@ return require('packer').startup(function(use)
   use("lervag/vimtex")
   use("sirver/ultisnips")
   use("Shougo/deoplete.nvim")
+  use {
+  'gelguy/wilder.nvim',
+  config = function()
+    -- config goes here
+  end,
+}
+  use("vim-airline/vim-airline")
   end)
 

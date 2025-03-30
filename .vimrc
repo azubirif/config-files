@@ -14,7 +14,7 @@ set t_Co=256
 set encoding=utf-8
 
 let g:UltiSnipsExpandTrigger='<c-j>'
-let g:UltiSnipsSnippetsDir = "~/.vim/plugged/vim-snippets/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/Documentos/GitHub/config-files/UltiSnips"
 let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 
 " Desactivar error highlighting en pylsp
