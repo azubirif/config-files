@@ -13,10 +13,10 @@ config.prefer_egl = true
 config.use_fancy_tab_bar = false
 -- For example, changing the color scheme:
 config.color_scheme = 'Zenburn'
-config.font = wezterm.font('0xProto Nerd Font')
+config.font = wezterm.font('JetBrains Mono')
 config.window_background_opacity = 0.9 
 
-config.window_decorations = "NONE | RESIZE"
+-- config.window_decorations = "NONE | RESIZE"
 
 config.initial_cols = 80
 -- and finally, return the configuration to wezterm
