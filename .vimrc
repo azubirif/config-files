@@ -25,7 +25,8 @@ let g:lsp_diagnostics_enabled = 0
 autocmd! VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | q | endif
 
 let mapleader = " "
-
+" Desactivar quickfix de VimTex
+let g:vimtex_quickfix_enabled = 0
 " Plugins
 call plug#begin()
 Plug 'lervag/vimtex'
@@ -55,6 +56,7 @@ Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim'
 Plug 'evanleck/vim-svelte'
 Plug 'airblade/vim-tailwind'
+Plug 'metalelf0/base16-black-metal-scheme'
 call plug#end()
 let g:ycm_auto_trigger=1
 
